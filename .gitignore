@@ -13,6 +13,62 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# ─── macOS ──────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# ─── Vagrant / VM ──────────────────────────────────────────────────────
+.vagrant/
+
+# ─── Python bytecode & caches ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ─── Virtual envs ──────────────────────────────────────────────────────
+# if you ever use `python -m venv venv/`
+venv/
+# Poetry-created venv in project:
+.venv/
+
+# ─── Environment vars ───────────────────────────────────────────────────
+.env
+.env.*.local
+
+# ─── Poetry ────────────────────────────────────────────────────────────
+# (keep poetry.lock in source control)
+poetry.lock  # <-- Remove this line if you *do* want to commit your lock file
+
+# ─── Caches & test output ──────────────────────────────────────────────
+.cache/
+.pytest_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# ─── Build & packaging ─────────────────────────────────────────────────
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# ─── IDE/editor settings ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ─── Logs & misc ────────────────────────────────────────────────────────
+*.log
+
 # Mono auto generated files
 mono_crash.*
 
