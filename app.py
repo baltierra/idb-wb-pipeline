@@ -57,7 +57,10 @@ def build_country_df(country_code: str) -> pd.DataFrame:
     return df, missing
 
 # ─── Dash app ───────────────────────────────────────────────────────────────
-app = Dash(__name__, suppress_callback_exceptions=True)
+app = Dash(
+    __name__,
+    suppress_callback_exceptions=True
+)
 
 app.layout = html.Div(
     style={"font-family":"Arial, sans-serif","margin":"20px"},
@@ -345,4 +348,4 @@ def update_table(country_code, selected_year):
     })
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8050, debug=True)
+    app.run(host="0.0.0.0", port=8050, debug=False)
