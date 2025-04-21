@@ -1,0 +1,58 @@
+/* ─── assets/style.css ───────────────────────────────────────────────────── */
+
+/* 1) Light/dark mode vars */
+:root {
+    --tile-bg:     #ffffff;
+    --tile-border: #ccc;
+    --page-bg:     #ffffff;
+    --text-color:  #000000;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --tile-bg:     #2a2a2a;
+      --tile-border: #555;
+      --page-bg:     #121212;
+      --text-color:  #dddddd;
+    }
+  }
+  
+  /* 2) Page background & global text */
+  body, .dash-app, .dash-application {
+    background-color: var(--page-bg) !important;
+    color:            var(--text-color) !important;
+  }
+  
+  /* 3) Info‑banner text */
+  .info-banner {
+    color: #333333 !important;
+  }
+  
+  /* 4) Style the pop‑up menu and its items by ARIA roles */
+  /* Menu container (listbox) */
+  #country-dropdown [role="listbox"],
+  #indicator-dropdown [role="listbox"],
+  #year-dropdown [role="listbox"] {
+    background-color: var(--page-bg) !important;
+  }
+  
+  /* Each option */
+  #country-dropdown [role="option"],
+  #indicator-dropdown [role="option"],
+  #year-dropdown [role="option"] {
+    background-color: var(--page-bg) !important;
+    color:            var(--text-color) !important;
+  }
+  
+  /* Hover/focus on an option */
+  #country-dropdown [role="option"]:hover,
+  #indicator-dropdown [role="option"]:hover,
+  #year-dropdown [role="option"]:hover {
+    background-color: var(--tile-border) !important;
+  }
+  
+  /* The selected option */
+  #country-dropdown [aria-selected="true"],
+  #indicator-dropdown [aria-selected="true"],
+  #year-dropdown [aria-selected="true"] {
+    background-color: var(--tile-bg) !important;
+  }
