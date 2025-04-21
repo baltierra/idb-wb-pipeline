@@ -28,6 +28,10 @@ A prototype dashboard that pulls key indicators from the World Bank API on‑th
    poetry install
    ```
 3. **Create your .env** (see .env.example)
+
+   This project can utilize data from all countries available through the World Bank API and supports any indicator the user needs to analyze. The front end updates dynamically based on the selected parameters. The most important step is correctly configuring the .env file, which stores all the necessary information. **An example is provided below for reference**.
+
+   This particular implementation only gathered information regarding the [26 IDB Borrowing Member Countries](https://www.iadb.org/en/who-we-are/how-we-are-organized/borrowing-member-countries) and 9 indicators of interest: "Agriculture, forestry, and fishing, value added (% of GDP)", "Central government debt, total (% of GDP)", "Exports of goods and services (% of GDP)", "GDP per capita growth (annual %)", "GDP per capita, PPP (current international \$)", "Imports of goods and services (% of GDP)", "Inflation, consumer prices (annual %)", "Net official development assistance received (current US\$)", "Revenue, excluding grants (% of GDP)".
    ```dotenv
    WB_API_BASE_URL="https://api.worldbank.org/v2"
    COUNTRIES="ARG,BHS,BRB,BLZ,…,URY,VEN"
