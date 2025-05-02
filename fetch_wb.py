@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from cachetools import TTLCache, cached
 import httpx
 
-# 1. Load environment
+# Load environment
 load_dotenv()
 
 WB_BASE = os.getenv("WB_API_BASE_URL")
@@ -13,7 +13,7 @@ START = os.getenv("START_YEAR")
 END = os.getenv("END_YEAR")
 CACHE_TTL = int(os.getenv("CACHE_TTL", 3600))
 
-# 2. Human‑readable names for each code
+# Human‑readable names for each code
 INDICATOR_NAME_MAP = {
     "NV.AGR.TOTL.ZS": "Agriculture, forestry, and fishing (% of GDP)",
     "GC.DOD.TOTL.GD.ZS": "Central government debt (% of GDP)",
@@ -26,7 +26,7 @@ INDICATOR_NAME_MAP = {
     "GC.REV.XGRT.GD.ZS":"Revenue, excluding grants (% of GDP)"
 }
 
-# 3. In‑memory TTL cache for API calls
+# In‑memory TTL cache for API calls
 cache = TTLCache(maxsize=500, ttl=CACHE_TTL)
 
 @cached(cache)
